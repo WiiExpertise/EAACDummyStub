@@ -24,7 +24,7 @@ This stub replaces that launcher, reads `EAAntiCheat.cfg` to find the game execu
 1. Download from releases and make sure it's named `EAAntiCheat.GameServiceLauncher.exe`, PDB file is there in case you need it. You do not need .NET runtime because the stub is published as a self-contained NativeAOT executable.
 2. Place it in the game directory, replacing the original launcher (suggested to back up the original first).
 3. Launch the game.
-- Because no anti-cheat background service is actually running, the game process detect the missing handshake **after a while** and terminate itself. For some titles you can get into bootflow and even run in local hosted mode (real gameplay but with DRM protected), but still, no online access.
+- Because no anti-cheat background service is actually running, the game process detect the missing handshake **after a while** and terminate itself. For some titles you can get into bootflow (keeps saying connection error) and even run in local hosted mode (real gameplay but with DRM protected), but still, no online access.
 4. Before the game realizes EAAC is fake and quits in protest, minimize or suspend the game process (e.g. Process Explorer since you have full access).
 5. While the process is suspended in its initial state, the memory is accessible, you may generate the Type SDK using Frosty.
 - Once you resume the process, it will still terminate. It is **impossible** to enter actual gameplay or connect to online services using this stub.
