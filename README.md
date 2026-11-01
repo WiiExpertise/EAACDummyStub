@@ -18,7 +18,7 @@ This stub replaces that launcher, reads `EAAntiCheat.cfg` to find the game execu
 
 ## How to Use
 
-> [!INFO]
+> [!NOTE]
 > Last test: 2026/11/01 using PvZGW2, PvZBFN, and Battlefield 6.
 
 1. Download from releases and make sure it's named `EAAntiCheat.GameServiceLauncher.exe`, PDB file is there in case you need it. You do not need .NET runtime because the stub is published as a self-contained NativeAOT executable.
