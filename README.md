@@ -18,7 +18,7 @@ A tool to allow memory reading for EA Javelin anticheat protected games. Mostly 
 - After a while, the game will discover the EAAC is fake, and terminate itself.
 7. Before the game notice that, minimize or suspend (e.g. Process Explorer since you got full access) the game process.
 8. The memory is accessable, create SDK using Frosty.
-- If you un-suspend the process, it will still terminate, there is no chance to get in real game.
+- If you resume the process, it will still terminate, there is no chance to get in real game.
 
 ## Disclaimer
 
