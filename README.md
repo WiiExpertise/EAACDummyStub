@@ -1,5 +1,5 @@
 > [!NOTE]
-> Project on hold, planned to rewrite and elimnate step 1, 2, 3.
+> Project on hold, planned to rewrite and eliminate step 1, 2, 3.
 
 # Fake EAAC
 
