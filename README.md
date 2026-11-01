@@ -62,7 +62,7 @@ Example (PvZGW2, level and mode names can be found with Frosty / Private Server 
 
 ```
 # PvZGW2 local hosted (this comment starts with # so it's ignored)
--level Level_FE_Hub -Game.DefaultLayerInclusion GameMode=FreeRoam;HostedMode=LocalHosted
+-Level Level_FE_Hub -Game.DefaultLayerInclusion GameMode=FreeRoam;HostedMode=LocalHosted
 
 # EAAC Dummy Stub options in another line for eazy editing
 --EAACDummyStub-Pause
