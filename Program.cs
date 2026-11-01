@@ -1,8 +1,10 @@
 ﻿using System.Diagnostics;
+using System.Text;
 
 using EAACDummyStub;
 
 const string configFileName = "EAAntiCheat.cfg";
+const string argsFileName = "EAACDummyStub.Args.txt";
 const string stubArgPrefix = "--EAACDummyStub";
 
 Console.WriteLine($"[EAAC Dummy Stub] Received {args.Length} argument(s):");
@@ -11,34 +13,58 @@ for (int i = 0; i < args.Length; i++)
     Console.WriteLine($"  [{i}] {args[i]}");
 }
 
-// --EAACDummyStub-Wait    Stay alive until the game exits and return its exit code
-// --EAACDummyStub-Pause   Wait for a key press before the stub closes, to read the output
-// Stub-only switches are stripped so the game never sees them.
 bool wait = false, pause = false;
-List<string> gameArgs = [];
-foreach (string arg in args)
-{
-    if (!arg.StartsWith(stubArgPrefix, StringComparison.OrdinalIgnoreCase))
-    {
-        gameArgs.Add(arg);
-        continue;
-    }
-
-    switch (arg[stubArgPrefix.Length..].ToLowerInvariant())
-    {
-        case "-wait": wait = true; break;
-        case "-pause": pause = true; break;
-        default: Console.WriteLine($"[EAAC Dummy Stub] Ignoring unknown stub option: {arg}"); break;
-    }
-}
-
 int exitCode = 0;
 try
 {
     // The stub sits next to the game, resolve everything relative to itself.
     string gameDirectory = AppContext.BaseDirectory;
-    string configPath = Path.Combine(gameDirectory, configFileName);
 
+    // Extra arguments from the text file next to the stub, appended after the received ones.
+    List<string> allArgs = [.. args];
+    List<string> argsPaths = [.. Directory
+        .EnumerateFiles(gameDirectory)
+        .Where(static f => Path.GetFileName(f).Equals(argsFileName, StringComparison.OrdinalIgnoreCase))];
+    foreach (string argsPath in argsPaths)
+    {
+        List<string> fileArgs = ReadArgsFile(argsPath);
+        Console.WriteLine($"[EAAC Dummy Stub] Loaded {fileArgs.Count} argument(s) from {Path.GetFileName(argsPath)}:");
+        for (int i = 0; i < fileArgs.Count; i++)
+        {
+            Console.WriteLine($"  [{i}] {fileArgs[i]}");
+        }
+        allArgs.AddRange(fileArgs);
+    }
+
+    // --EAACDummyStub-Wait    Stay alive until the game exits and return its exit code
+    // --EAACDummyStub-Pause   Wait for a key press before the stub closes, to read the output
+    // Stub-only switches are stripped so the game never sees them.
+    List<string> gameArgs = [];
+    foreach (string arg in allArgs)
+    {
+        if (!arg.StartsWith(stubArgPrefix, StringComparison.OrdinalIgnoreCase))
+        {
+            gameArgs.Add(arg);
+            continue;
+        }
+
+        switch (arg[stubArgPrefix.Length..].ToLowerInvariant())
+        {
+            case "-wait":
+                wait = true;
+                Console.WriteLine($"[EAAC Dummy Stub] Stub option -Wait received and excluded");
+                break;
+            case "-pause": 
+                pause = true; 
+                Console.WriteLine($"[EAAC Dummy Stub] Stub option -Pause received and excluded");
+                break;
+            default:
+                Console.WriteLine($"[EAAC Dummy Stub] Ignoring and excluding unknown stub option: {arg}"); 
+                break;
+        }
+    }
+
+    string configPath = Path.Combine(gameDirectory, configFileName);
     List<GameProfile> profiles = EaacConfig.Read(configPath);
     foreach (GameProfile p in profiles)
     {
@@ -80,3 +106,48 @@ if (pause && !Console.IsInputRedirected)
     Console.ReadKey(true);
 }
 return exitCode;
+
+// Each line split on whitespace, double quotes group text containing spaces.
+// Blank lines and lines starting with '#' are ignored.
+static List<string> ReadArgsFile(string path)
+{
+    List<string> result = [];
+    foreach (string rawLine in File.ReadLines(path))
+    {
+        string line = rawLine.Trim();
+        if (line.Length == 0 || line.StartsWith('#'))
+        {
+            continue;
+        }
+
+        StringBuilder current = new();
+        bool inQuotes = false, hasToken = false;
+        foreach (char c in line)
+        {
+            if (c == '"')
+            {
+                inQuotes = !inQuotes;
+                hasToken = true;
+            }
+            else if (char.IsWhiteSpace(c) && !inQuotes)
+            {
+                if (hasToken)
+                {
+                    result.Add(current.ToString());
+                    current.Clear();
+                    hasToken = false;
+                }
+            }
+            else
+            {
+                current.Append(c);
+                hasToken = true;
+            }
+        }
+        if (hasToken)
+        {
+            result.Add(current.ToString());
+        }
+    }
+    return result;
+}
