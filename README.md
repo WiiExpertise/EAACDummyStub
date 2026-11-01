@@ -71,12 +71,14 @@ Use the same x64 Windows build so the game/stub detects `.exe` extension, let Wi
 
 ## Test Result
 
+Feel free to test more games in your own environment and contributes!
+
 | Date       | OS      | Platform | Game          | Result                                                                                                         |
 | ---------- | ------- | -------- | ------------- | -------------------------------------------------------------------------------------------------------------- |
-| 2026-11-01 | Win-x64 | EA app   | PvZ: GW2      | Reaches bootflow (keeps spinning on connecting). Local hosted mode works with [launch arguments](#args-file).  |
-| 2026-11-01 | Win-x64 | EA app   | PvZ: BFN      | Reaches bootflow (keeps showing connection errors). Local hosted mode not working (maybe wrong arguments).     |
-| 2026-11-01 | Win-x64 | EA app   | Battlefield 6 | Black screen, then a Win32 dialog saying the environment may be incompatible.                                  |
-| 2024       | Win-x64 | EA app   | PvZ: GW2      | Reaches bootflow for few seconds and terminate itself. Seems more like a bug nowdays.                          |
+| 2026-11-01 | Win-x64 | EA app   | PvZ: GW2      | 🟢 Reaches bootflow (keeps spinning on connecting). Local hosted mode works with [launch arguments](#args-file).  |
+| 2026-11-01 | Win-x64 | EA app   | PvZ: BFN      | 🟡 Reaches bootflow (keeps showing connection errors). Local hosted mode not working (maybe wrong arguments).     |
+| 2026-11-01 | Win-x64 | EA app   | Battlefield 6 | 🔴 Black screen, then a Win32 dialog saying the environment may be incompatible.                                  |
+| 2024       | Win-x64 | EA app   | PvZ: GW2      | 😂 Reaches bootflow for few seconds and terminate itself. Seems more like a bug nowdays.                          |
 
 *Bootflow is the Frostbite screen every game shows first to connect to EA servers.*
 
