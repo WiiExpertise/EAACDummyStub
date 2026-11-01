@@ -3,7 +3,7 @@
 
 # Fake EAAC
 
-A tool to allow reading memory on a EA Javelin anticheat protected games. Mostly used for Frosty to generate type SDK. It DOES NOT bypass anticheat, CANNOT be used for cheating, just a small trick to read memory.
+A tool to allow memory reading for EA Javelin anticheat protected games. Mostly used for Frosty to generate type SDK. It DOES NOT bypass anticheat, CANNOT be used for cheating, just a small trick to read memory.
 
 ## How to use
 
