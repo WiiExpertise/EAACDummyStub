@@ -47,7 +47,7 @@ The stub always waits for a key press on errors.
 
 ### Args File
 
-Some launchers (e.g. EA app) reject special characters in launch arguments, especially like `;`. We got control during the launch process, so instead, put arguments in `EAACDummyStub.Args.txt` (case-insensitive) next to the stub, and they will be appended after the arguments the stub received. Stub options work there too.
+Some launchers (e.g. EA app) reject special characters in launch arguments, especially like `;`. We got control during the launch process, so instead, put arguments in `EAACDummyStub.Args.txt` (case-insensitive) next to the stub, and they will be appended. Stub options work there too.
 
 - Arguments are separated by whitespace, wrap an argument containing spaces in double quotes.
 - Multiple lines are allowed; blank lines and lines starting with `#` are ignored.
@@ -76,16 +76,9 @@ Use the same x64 Windows build so the game/stub detects `.exe` extension, let Wi
 | 2026-11-01 | Win-x64 | EA app   | PvZ: GW2      | Reaches bootflow (keeps spinning on connecting). Local hosted mode works with [launch arguments](#args-file).  |
 | 2026-11-01 | Win-x64 | EA app   | PvZ: BFN      | Reaches bootflow (keeps showing connection errors). Local hosted mode not working (maybe wrong arguments).     |
 | 2026-11-01 | Win-x64 | EA app   | Battlefield 6 | Black screen, then a Win32 dialog saying the environment may be incompatible.                                  |
+| 2024       | Win-x64 | EA app   | PvZ: GW2      | Reaches bootflow for few seconds and terminate itself. Seems more like a bug nowdays.                          |
 
 *Bootflow is the Frostbite screen every game shows first to connect to EA servers.*
-
-#### Archived
-
-When I made this stub 2 years ago with 2 lines of code, testing on GW2 made the game terminate itself. The old README archives here for reference.
-
-> Because no anti-cheat background service is actually running, the game process detect the missing handshake **after a while** and terminate itself.
-> 
-> 4. Before the game realizes EAAC is fake and quits in protest, minimize or suspend the game process (e.g. Process Explorer since you have full access).
 
 ## Building
 
