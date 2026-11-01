@@ -16,7 +16,7 @@ This stub replaces that launcher, reads `EAAntiCheat.cfg` to find the game execu
 
 `EAAntiCheat.cfg` is a resource-only PE image signed by EA using Authenticode. Its RCDATA resource holds a protobuf (Google Protocol Buffers) listing launch profiles (e.g. `default` -> `GW2.Main_Win64_Retail.exe`, `trial` -> `GW2.Main_Win64_Retail_Trial.exe`). The stub prefers `default` and falls back to whichever listed executable exists. Received arguments and detected profiles are printed to the console.
 
-The core code of this stub is 1 line. Everything else is about auto detect and args parsing.
+The core code of this stub is 1 line. Everything else is about auto-locate game executable and args parsing so it’s a no-brain replace.
 
 ```csharp
 Process.Start("Game.exe");
