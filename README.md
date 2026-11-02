@@ -1,4 +1,4 @@
-# ![EA anticheat launcher icon with color changed to magenta and "EA" changed to "FA". Means both the "FAAA!!" meme and shorten for "Fake".](path/to/your/image.svg) EA anticheat Dummy Stub
+# ![EA anticheat launcher icon with color changed to magenta and "EA" changed to "FA". Means both the "FAAA!!" meme and shorten for "Fake".](Resources/Logo_FA_RGB.svg) EA anticheat Dummy Stub
 
 A stub utility for assist modding Frostbite engine games protected by EA Javelin anticheat with Frosty Toolsuite. Including generating Type SDKs, and launching modded games directly in local hosted mode for testing, without external tools (e.g. Frosty Fix). It **DOES NOT** bypass anti-cheat or DRM and **CANNOT** be used for online cheating or pirating, the game never reaches EA servers or any online service.
 
