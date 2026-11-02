@@ -1,6 +1,6 @@
 # <img src="Resources/Logo_FA_RGB_GitHubHeader.svg" alt="Logo. EA Javelin Anticheat launcher icon with color changed to magenta and 'EA' changed to 'FA'. Means both the 'FAAA!!' meme and shorten for 'Fake'." align="absmiddle"> Dummy Stub for EA anticheat
 
-A stub utility for assist modding Frostbite engine games protected by EA Javelin Anticheat with Frosty Toolsuite. Including generating Type SDKs, and launching modded games directly in local hosted mode for testing, without external tools (e.g. Frosty Fix). It **DOES NOT** bypass anti-cheat or DRM and **CANNOT** be used for online cheating or pirating, the game never reaches EA servers or any online service.
+A stub utility for assisting in modding Frostbite engine games protected by EA Javelin Anticheat with Frosty Toolsuite. Including generating Type SDKs, and launching modded games directly in local hosted mode for testing, without external tools (e.g. Frosty Fix). It **DOES NOT** bypass anti-cheat or DRM and **CANNOT** be used for online cheating or pirating, the game never reaches EA servers or any online service.
 
 ## How It Works
 
@@ -64,14 +64,14 @@ Example (PvZGW2, level and mode names can be found with Frosty / Private Server 
 # PvZGW2 local hosted (this comment starts with # so it's ignored)
 -Level Level_FE_Hub -Game.DefaultLayerInclusion GameMode=FreeRoam;HostedMode=LocalHosted
 
-# EAAC Dummy Stub options in another line for eazy editing
+# EAAC Dummy Stub options in another line for easy editing
 --EAACDummyStub-Pause
 ```
 
 ### ARM64, Linux, macOS and other OS (Wine / Proton)
 
 > [!WARNING]
-> This method was not tested. Please tell me does it works, and report any issues.
+> This method was not tested. Please tell me if it works, and report any issues.
 
 Use the same x64 Windows build so the game/stub detects `.exe` extension, let Wine do the rest, the stub was designed to be case-insensitive. To suspend the game, suggest using `kill -STOP <pid>` on its Wine process.
 
@@ -104,7 +104,7 @@ This project does not accept any form of cheating, anti-cheat circumvention, or 
 
 ## Legal & Disclaimer
 
-This project cannot, and does not intent to bypass anticheat. It is designed for local modding and cannot be used to facilitate online cheating. When using this tool, the game never reaches EA servers or any official online service. It is developed and distributed strictly in accordance with 17 U.S.C. § 1201(f) (Reverse Engineering for Interoperability) of the Digital Millennium Copyright Act:
+This project cannot, and does not intend to bypass anticheat. It is designed for local modding and cannot be used to facilitate online cheating. When using this tool, the game never reaches EA servers or any official online service. It is developed and distributed strictly in accordance with 17 U.S.C. § 1201(f) (Reverse Engineering for Interoperability) of the Digital Millennium Copyright Act:
 
 1. Sole Purpose of Interoperability: This stub is designed exclusively to enable interoperability between lawfully acquired video game software and independently created third-party modding/analysis tools (specifically the open-source Frosty Toolsuite, for Type SDK generation and testing mods offline).
 
@@ -112,7 +112,7 @@ This project cannot, and does not intent to bypass anticheat. It is designed for
 
 3. Zero Tolerance for Cheating: This tool cannot be used to facilitate any form of online cheating, as the game can never reach online services.
 
-4. Zero Tolerance for Pirating: This tool cannot be used to facilitate any form of pirating. User still needs to purchased a legal license/copy to launch the game, the launch still goes through EA app or corresponding platform where they purchase at.
+4. Zero Tolerance for Pirating: This tool cannot be used to facilitate any form of pirating. User still needs to purchases a legal license/copy to launch the game, the launch still goes through EA app or corresponding platform where they purchase at.
 
 5. No Proprietary Assets: This repository contains only a standard .NET process-launch wrapper and includes no proprietary code, binaries, or cryptographic keys belonging to Electronic Arts Inc.
 
