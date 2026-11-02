@@ -13,10 +13,11 @@
     <StripSymbols>true</StripSymbols>
     <InvariantGlobalization>true</InvariantGlobalization>
     <AssemblyName>EAAntiCheat.GameServiceLauncher</AssemblyName>
+    <ApplicationIcon>Resources/FA_RGB.ico</ApplicationIcon>
     <Name>EAACDummyStub</Name>
     <Title>EAAC Dummy Stub</Title>
     <Description>EAAC Dummy Stub</Description>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/shoushou1106/EAACDummyStub</PackageProjectUrl>
     <Authors>shoushou1106</Authors>
