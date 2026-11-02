@@ -66,6 +66,9 @@ Example (PvZGW2, level and mode names can be found with Frosty / Private Server 
 
 # EAAC Dummy Stub options in another line for easy editing
 --EAACDummyStub-Pause
+
+# Frosty ModData, optional to apply mods, the name is your pack name, or `Editor` for editor.
+-dataPath ModData\Editor
 ```
 
 ### ARM64, Linux, macOS and other OS (Wine / Proton)
