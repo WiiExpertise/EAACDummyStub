@@ -33,7 +33,7 @@ Process.Start("Game.exe");
 
 ### Generating Type SDK
 
-1. Before the game realizes EAAC is fake and quits in protest, minimize or suspend the game process (e.g. Process Explorer since you have full access).
+1. Before the game realizes EAAC is fake and quits in protest, minimize or suspend the game process (e.g. Process Explorer since you have full access). If the game protest with a error message box, the message box itself will suspend the game for you, just keep it.
 2. While the process is suspended, the memory is accessible, you may generate the Type SDK using Frosty.
 
 ### Local Hosted Mode
