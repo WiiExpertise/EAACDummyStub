@@ -82,15 +82,15 @@ Use the same x64 Windows build so the game/stub detects `.exe` extension, let Wi
 
 Feel free to test more games in your own environment and contributes! EAAC have OTA updates so keep this table up to date.
 
-| Date       | OS      | Platform | Game          | Result                                                                                                         |
-| ---------- | ------- | -------- | ------------- | -------------------------------------------------------------------------------------------------------------- |
-| 2026-11-01 | Win-x64 | EA app   | PvZ: GW2      | 🟢 Reaches bootflow (keeps spinning on connecting). Local hosted mode works with [launch arguments](#args-file).  |
-| 2026-11-01 | Win-x64 | EA app   | PvZ: BFN      | 🟡 Reaches bootflow (keeps showing connection errors). Local hosted mode not working (maybe wrong arguments).     |
-| 2026-11-01 | Win-x64 | EA app   | Battlefield 6 | 🔴 Black screen, then a Win32 dialog saying the environment may be incompatible.                                  |
-| 2026-11-01 | Win-x64 | EA app   | Madden NFL 25 | 🔴 Process launches, quickly terminates before main window can appear                             |
-| 2026-11-01 | Win-x64 | EA app   | Madden NFL 26 | 🔴 Process launches, quickly terminates before main window can appear                             |
-| 2026-11-01 | Win-x64 | EA app   | Madden NFL 27 | 🔴 Process launches, terminates almost immediately (within few seconds) before main window can appear                             |
-| 2024       | Win-x64 | EA app   | PvZ: GW2      | 😂 Reaches bootflow for few seconds and terminate itself. Seems more like a bug nowdays.                          |
+| Date       | OS      | Platform | Game          | Result                                                                                                            | Contributor |
+| ---------- | ------- | -------- | ------------- | ----------------------------------------------------------------------------------------------------------------- | ----------- | 
+| 2026-11-01 | Win-x64 | EA app   | PvZ: GW2      | 🟢 Reaches bootflow (keeps spinning on connecting). Local hosted mode works with [launch arguments](#args-file).  | [@shoushou1106](https://github.com/shoushou1106) |
+| 2026-11-01 | Win-x64 | EA app   | PvZ: BFN      | 🟡 Reaches bootflow (keeps showing connection errors). Local hosted mode not working (maybe wrong arguments).     | [@shoushou1106](https://github.com/shoushou1106) |
+| 2026-11-01 | Win-x64 | EA app   | Battlefield 6 | 🟡 Black screen, then a Win32 dialog saying the environment may be incompatible.                                  | [@shoushou1106](https://github.com/shoushou1106) |
+| 2026-11-01 | Win-x64 | EA app   | Madden NFL 25 | 🔴 Process launches, quickly terminates before main window can appear                                             | [@WiiExpertise](https://github.com/WiiExpertise) |
+| 2026-11-01 | Win-x64 | EA app   | Madden NFL 26 | 🔴 Process launches, quickly terminates before main window can appear                                             | [@WiiExpertise](https://github.com/WiiExpertise) |
+| 2026-11-01 | Win-x64 | EA app   | Madden NFL 27 | 🔴 Process launches, terminates almost immediately (within few seconds) before main window can appear             | [@WiiExpertise](https://github.com/WiiExpertise) |
+| 2024       | Win-x64 | EA app   | PvZ: GW2      | 😂 Reaches bootflow for few seconds and terminate itself. Seems more like a bug nowdays.                          | [@shoushou1106](https://github.com/shoushou1106) |
 
 *Bootflow is the Frostbite screen every game shows first to connect to EA servers.*
 
