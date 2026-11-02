@@ -1,6 +1,6 @@
-# <img src="Resources/Logo_FA_RGB_GitHubHeader.svg" alt="Logo. EA anticheat launcher icon with color changed to magenta and 'EA' changed to 'FA'. Means both the 'FAAA!!' meme and shorten for 'Fake'." align="absmiddle"> EA anticheat Dummy Stub
+# <img src="Resources/Logo_FA_RGB_GitHubHeader.svg" alt="Logo. EA Javelin Anticheat launcher icon with color changed to magenta and 'EA' changed to 'FA'. Means both the 'FAAA!!' meme and shorten for 'Fake'." align="absmiddle"> Dummy Stub for EA anticheat
 
-A stub utility for assist modding Frostbite engine games protected by EA Javelin anticheat with Frosty Toolsuite. Including generating Type SDKs, and launching modded games directly in local hosted mode for testing, without external tools (e.g. Frosty Fix). It **DOES NOT** bypass anti-cheat or DRM and **CANNOT** be used for online cheating or pirating, the game never reaches EA servers or any online service.
+A stub utility for assist modding Frostbite engine games protected by EA Javelin Anticheat with Frosty Toolsuite. Including generating Type SDKs, and launching modded games directly in local hosted mode for testing, without external tools (e.g. Frosty Fix). It **DOES NOT** bypass anti-cheat or DRM and **CANNOT** be used for online cheating or pirating, the game never reaches EA servers or any online service.
 
 ## How It Works
 
@@ -108,10 +108,12 @@ This project cannot, and does not intent to bypass anticheat. It is designed for
 
 1. Sole Purpose of Interoperability: This stub is designed exclusively to enable interoperability between lawfully acquired video game software and independently created third-party modding/analysis tools (specifically the open-source Frosty Toolsuite, for Type SDK generation and testing mods offline).
 
-2. No Anti-Cheat Circumvention: This software contains zero code to bypass, spoof, hook, or disable EA Javelin anticheat, digital rights management, or any other technical protection measure. It never starts, emulates, or answers the anti-cheat service. Without it, the target application cannot connect to EA servers or any online service. Some titles still run in local hosted mode, which never involves other players. DRM remains fully enforced and untouched.
+2. No Anti-Cheat Circumvention: This software contains zero code to bypass, spoof, hook, or disable EA Javelin Anticheat, digital rights management, or any other technical protection measure. It never starts, emulates, or answers the anti-cheat service. Without it, the target application cannot connect to EA servers or any online service. Some titles still run in local hosted mode, which never involves other players. DRM remains fully enforced and untouched.
 
 3. Zero Tolerance for Cheating: This tool cannot be used to facilitate any form of online cheating, as the game can never reach online services.
 
 4. Zero Tolerance for Pirating: This tool cannot be used to facilitate any form of pirating. User still needs to purchased a legal license/copy to launch the game, the launch still goes through EA app or corresponding platform where they purchase at.
 
 5. No Proprietary Assets: This repository contains only a standard .NET process-launch wrapper and includes no proprietary code, binaries, or cryptographic keys belonging to Electronic Arts Inc.
+
+6. Trademark & Parody Notice: This project is an independent, non-commercial, open-source community tool and is not affiliated with, endorsed by, or connected to Electronic Arts Inc. The "FA" logo is a comedic parody meaning “Fake” and “FAA!!” and is used strictly for visual distinction so users do not confuse this stub with official software. All product and company names, including EA, EA app, EA Javelin Anticheat, EA anticheat, Steam, Epic Games, Xbox, are trademarks of their respective holders and are used solely for nominative identification purposes.
